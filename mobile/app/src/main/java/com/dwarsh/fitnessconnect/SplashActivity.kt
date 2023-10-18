@@ -7,7 +7,7 @@ import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
 
-class SplashActivity : FullScreenActivity() {
+class SplashActivity : AppCompatActivity() {
 
     private val signInLauncher = registerForActivityResult(
         FirebaseAuthUIActivityResultContract(),
@@ -29,6 +29,7 @@ class SplashActivity : FullScreenActivity() {
         val signInIntent = AuthUI.getInstance()
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
+            .setTheme(R.style.Theme_FitnessConnect)
             .setLogo(R.drawable.splash_screen) // Set logo drawable
             .build()
         signInLauncher.launch(signInIntent)
@@ -47,5 +48,9 @@ class SplashActivity : FullScreenActivity() {
             // response.getError().getErrorCode() and handle the error.
             // ...
         }
+    }
+
+    override fun onBackPressed() {
+
     }
 }
