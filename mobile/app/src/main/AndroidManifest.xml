@@ -13,6 +13,7 @@
         android:theme="@style/Theme.FitnessConnect"
         tools:targetApi="31">
         <activity
+            android:theme="@style/Theme.FitnessConnect"
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
