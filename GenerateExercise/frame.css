@@ -1,0 +1,24 @@
+.frame{
+    align-items: center;
+  background-color: #b9b8b8;
+  border-radius: 20px;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 30px;
+  position: relative;
+}
+
+.frame .text-wrapper {
+    color: #000000;
+    font-family: "Roboto-Light", Helvetica;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
