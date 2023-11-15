@@ -57,6 +57,11 @@ dependencies {
     //Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-database-ktx")
     implementation("com.firebaseui:firebase-ui-auth:8.0.2")
+
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.8.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.8.0")
 
 }

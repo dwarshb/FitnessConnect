@@ -1,22 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
-
-    <TextView
-        android:id="@+id/text_home"
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                tools:src="@tools:sample/avatars"
+                android:id="@+id/profilePicture"
+                android:layout_width="48dp"
+                android:layout_height="48dp"/>
+            <TextView
+                android:layout_toStartOf="@+id/notification"
+                android:id="@+id/greeting"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/profilePicture"
+                android:text="@string/greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/userid"
+                android:layout_toStartOf="@+id/notification"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                tools:text="Darshan Bhanushali"
+                android:layout_below="@+id/greeting"
+                android:layout_toEndOf="@+id/profilePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/baseline_circle_notifications_24"
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/material_dynamic_primary50"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toStartOf="@+id/progressBar"
+                    android:textColor="@color/white"
+                    android:id="@+id/previousTrainingText"
+                    tools:text="@string/previousTrainingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_alignLeft="@+id/progressBar"
+                    android:layout_alignTop="@+id/progressBar"
+                    android:layout_alignRight="@+id/progressBar"
+                    android:layout_alignBottom="@+id/progressBar"
+                    android:textColor="@color/white"
+                    tools:text="0%"
+                    android:id="@+id/previousTrainingProgressText"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:progressTint="@color/white"
+                    android:indeterminateTint="@android:color/holo_orange_dark"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"/>
+                <com.google.android.material.button.MaterialButton
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/material_dynamic_primary50"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/previousTrainingText"
+                    android:text="@string/suggest_excercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_marginTop="24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@string/available_programs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/availableProgramRv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

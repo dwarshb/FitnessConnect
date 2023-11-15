@@ -3,4 +3,8 @@
     <string name="title_fitness">Fitness</string>
     <string name="title_chat">Chat</string>
     <string name="title_notifications">Notifications</string>
+    <string name="greeting">Good Morning 👋</string>
+    <string name="suggest_excercise">Suggest Excercise</string>
+    <string name="available_programs">Available Programs</string>
+    <string name="previousTrainingText">You did not have any exercise history. Whats your plan for today?</string>
 </resources>
