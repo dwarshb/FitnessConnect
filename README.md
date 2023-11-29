@@ -22,7 +22,7 @@ Simply clone the project from [FitnessConnect](https://github.com/dwarshb/Fitnes
 - Navigate to the folder where this project is cloned and select 'mobile' folder. This will load required gradle files and library in Android Studio.
 - Once the project is Synced, Click on Run button at the top menu of IDE
 - Note - You should have Android Emulator installed in your system to run your app.
-- 
+  
 ## Screenshots
 ![WhatsApp Image 2023-11-07 at 8 08 03 AM](https://github.com/dwarshb/FitnessConnect/assets/32565650/48c1130c-9fab-4987-bd37-9981fab253e5)
 
